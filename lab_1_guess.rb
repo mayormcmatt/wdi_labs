@@ -19,28 +19,43 @@ $rand_num = rand(100).to_i
 def user_guess
 	puts "What's your guess?"
 	$guess = gets.chomp.to_i
+	tries += 1
 	if $rand_num < $guess
 		puts "The number is less than #{$guess}. Please try again."
 	elsif $rand_num > $guess
 		puts "The number is more than #{$guess}. Please try again."
 	elsif $rand_num == $guess
-		puts "Congratulations; you guessed correct in #{$total_tries} tries!"
+		puts "Congratulations; you guessed correct in #{tries} tries!"
 	else
 		puts "That isn't a valid input. Enter a number 1-100."
 	end
-	$guess # return $guess so that try counter can get it
 end
 
 user_guess
 
-tries = [] # initialize a blank array for storing tries
+# tries = [] # initialize a blank array for storing tries
 
 until $rand_num == $guess
 	$guess = user_guess
-	tries.push($guess) # push guesses to empty array
+	# tries.push($guess) # push guesses to empty array
 end
 
-add_tries = tries.push($guess)
-$total_tries = tries.length # try counter is totally not working! Bleh!
+# add_tries = tries.push($guess)
+# $total_tries = tries.length # try counter is totally not working! Bleh!
 
-# Change made for Git practice
+# Steve's solution
+
+# number = rand(1..100)
+# puts "Guess number 1-100"
+# guess = gets.to_i
+# guesses = 1
+# while guess != number
+# 	if guess < number
+# 		puts "Guess higher"
+# 	else
+# 		puts "Guess lower"
+# 	end
+# 	guess = gets.chomp.to_iguesses += 1
+# end
+
+# puts "#{number} is the number in #{guesses}!"

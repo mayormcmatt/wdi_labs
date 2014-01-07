@@ -12,7 +12,7 @@ puts "Insert a phrase to frame."
 phrase = gets.chomp.split
 max_word = phrase.max { |a, b| a.length <=> b.length }.length
 # min_word = phrase.min { |a, b| a.length <=> b.length }.length
-body_line = phrase.center(max_word)
+body_line = phrase.center(max_word) # this is causing me trouble
 # phrase_arr = phrase.map { |x| "*" + x + "*"}
 star_line = "*" + ("*" * max_word) + "*"
 
@@ -21,3 +21,4 @@ puts body_line
 puts star_line
 
 # padding in body text is NOT working! Bleh!
+
