@@ -42,3 +42,5 @@ end
 
 add_tries = tries.push($guess)
 $total_tries = tries.length # try counter is totally not working! Bleh!
+
+# Change made for Git practice
