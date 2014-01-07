@@ -11,6 +11,8 @@
 # reference second position, second-to-last position
 # repeat process until first position character is in center
 
+# git clone wars
+
 puts "Enter a string"
 str_to_reverse = gets.chomp
 
